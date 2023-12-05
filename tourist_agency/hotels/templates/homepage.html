@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Categories</h2>
+    <ul>
+        {% for category in categories %}
+            <li>{{ category.name }}</li>
+        {% empty %}
+            <li>No categories found.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Countries</h2>
+    <ul>
+        {% for country in countries %}
+            <li>{{ country.name }}</li>
+        {% empty %}
+            <li>No countries found.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Hotels</h2>
+    <ul>
+        {% for hotel in hotels %}
+            <li>
+                <h3>{{ hotel.name }}</h3>
+                <p>Category: {{ hotel.category }}</p>
+                <p>Country: {{ hotel.country }}</p>
+                <!-- Добавьте другие поля отеля -->
+            </li>
+        {% empty %}
+            <li>No hotels found.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
