@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block content %}
+    <h2>Make Reservation</h2>
+    <form method="post">
+        {% csrf_token %}
+        <!-- Форма бронирования -->
+        <input type="submit" value="Book">
+    </form>
+{% endblock %}
+</html>
