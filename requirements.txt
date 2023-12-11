@@ -36,3 +36,4 @@ systemctl --type=service | grep rabbit
 celery
 frozendict
 pydantic
+black
